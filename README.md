@@ -22,11 +22,21 @@ You
 
 **Meaning commissions. Structure constrains. Factories execute. Validity is binary at every layer.**
 
+## Quick Start
+
+- **New here?** Start with [MANIFESTO.md](MANIFESTO.md) for the philosophy, then [ARCHITECTURE.md](ARCHITECTURE.md) for the one-page overview
+- **Want the full picture?** Read [docs/01-evolution.md](docs/01-evolution.md) through [docs/05-canon-integration.md](docs/05-canon-integration.md) in order
+- **Building something?** Jump to [specs/](specs/) for formal schemas and [examples/](examples/) for concrete scenarios
+
 ## Repository Structure
 
 ```
 ├── README.md                          # This file
 ├── MANIFESTO.md                       # The philosophical foundation
+├── ARCHITECTURE.md                    # Single-page architecture overview
+├── CHANGELOG.md                       # Version history
+├── GLOSSARY.md                        # Terminology reference
+├── ROADMAP.md                         # Implementation roadmap
 ├── docs/
 │   ├── 01-evolution.md                # PA → MB-OS → Agentic Factories
 │   ├── 02-mb-os.md                    # The Meaning-Based Operating System
@@ -45,7 +55,8 @@ You
 └── examples/
     ├── research-factory.md            # Example: Research Factory
     ├── creation-factory.md            # Example: Creation Factory
-    └── decision-factory.md            # Example: Decision Factory
+    ├── decision-factory.md            # Example: Decision Factory
+    └── execution-factory.md           # Example: Execution Factory (meta-recursive)
 ```
 
 ## Architectural Principles

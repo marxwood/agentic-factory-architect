@@ -1,0 +1,62 @@
+graph TB
+    subgraph BIOS["1. Meaning Layer (BIOS)"]
+        VALUES["Values<br/>(weighted graph)"]
+        COMMITMENTS["Commitments<br/>(temporal scope)"]
+        TENSIONS["Active Tensions<br/>(held contradictions)"]
+        IDENTITY["Identity Narrative<br/>(who you're becoming)"]
+        VALUES <--> COMMITMENTS
+        VALUES <--> TENSIONS
+        COMMITMENTS <--> IDENTITY
+        TENSIONS <--> IDENTITY
+    end
+
+    subgraph COHERENCE["2. Coherence Engine"]
+        TRACK["Action-Value<br/>Alignment Tracking"]
+        DRIFT["Drift<br/>Detection"]
+        PATTERN["Pattern<br/>Recognition"]
+        NOTIFY["Non-Judgmental<br/>Notification"]
+        TRACK --> DRIFT
+        DRIFT --> PATTERN
+        PATTERN --> NOTIFY
+    end
+
+    subgraph DECISION["3. Decision Interface"]
+        MAP["Option Mapping<br/>Against Values"]
+        TENSION_SURF["Tension<br/>Surfacing"]
+        CONSEQUENCE["Consequence<br/>Modeling"]
+        HISTORY["Historical<br/>Pattern Awareness"]
+    end
+
+    subgraph NARRATIVE["4. Narrative Engine"]
+        THEMES["Theme Tracking"]
+        ARCS["Arc Awareness"]
+        TRANSITION["Transition<br/>Detection"]
+        STORY["Story<br/>Coherence"]
+        THEMES --> ARCS
+        ARCS --> TRANSITION
+        TRANSITION --> STORY
+    end
+
+    subgraph INTERFACE["5. Interface Layer (PA)"]
+        CONVERSATION["Conversational<br/>Interface"]
+        TASK["Task<br/>Execution"]
+        DEPTH["Surface ↔ Depth<br/>Navigation"]
+    end
+
+    BIOS -->|"source of truth"| COHERENCE
+    BIOS -->|"evaluates against"| DECISION
+    BIOS -->|"tracks"| NARRATIVE
+    COHERENCE -->|"surfaces drift"| INTERFACE
+    DECISION -->|"presents tensions"| INTERFACE
+    NARRATIVE -->|"holds story"| INTERFACE
+    INTERFACE -->|"interacts with"| USER["You"]
+
+    BIOS -->|"commissions"| FACTORY["Agentic Factories"]
+    FACTORY -->|"delivers to"| BIOS
+
+    style BIOS fill:#2c3e50,color:#ecf0f1
+    style COHERENCE fill:#2980b9,color:#ecf0f1
+    style DECISION fill:#8e44ad,color:#ecf0f1
+    style NARRATIVE fill:#27ae60,color:#ecf0f1
+    style INTERFACE fill:#d35400,color:#ecf0f1
+    style FACTORY fill:#c0392b,color:#ecf0f1

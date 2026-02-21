@@ -1,0 +1,44 @@
+graph TB
+    subgraph Human["🧠 Human Layer"]
+        YOU["You"]
+    end
+
+    subgraph PA["📱 Personal Assistant Layer"]
+        INTERFACE["Conversational Interface"]
+    end
+
+    subgraph MBOS["🧭 MB-OS Layer"]
+        ML["Meaning Layer<br/>(Values, Commitments, Tensions)"]
+        CE["Coherence Engine<br/>(Drift Detection)"]
+        DI["Decision Interface<br/>(Value-Aligned Choices)"]
+        NE["Narrative Engine<br/>(Story & Arc Tracking)"]
+    end
+
+    subgraph FACTORY["🏭 Agentic Factory Layer"]
+        CR["Commission Register"]
+        DE["Decomposition Engine"]
+        AR["Agent Registry"]
+        OL["Orchestration Layer"]
+        VG["Validation Gates"]
+        AL["Assembly Layer"]
+        DL["Delivery Interface"]
+    end
+
+    YOU <-->|"interacts through"| INTERFACE
+    INTERFACE <-->|"runs on"| ML
+    ML <--> CE
+    ML <--> DI
+    ML <--> NE
+    ML -->|"commissions"| CR
+    CR --> DE
+    DE --> AR
+    AR --> OL
+    OL <-->|"return loops"| VG
+    VG --> AL
+    AL --> DL
+    DL -->|"delivers to"| ML
+
+    style Human fill:#f9f7f1,stroke:#333
+    style PA fill:#e8e4d9,stroke:#333
+    style MBOS fill:#d4cfbf,stroke:#333
+    style FACTORY fill:#c0b9a5,stroke:#333

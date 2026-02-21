@@ -1,0 +1,43 @@
+flowchart TD
+    START["MB-OS Issues Commission"] --> CR["Commission Register<br/>━━━━━━━━━━━━━━━━━━<br/>• Origin (meaning source)<br/>• Intent (semantic description)<br/>• Entities (named things)<br/>• Constraints (hard + soft)<br/>• Validity criteria (binary tests)<br/>• Scope boundary"]
+
+    CR -->|"immutable commission"| DE["Decomposition Engine<br/>━━━━━━━━━━━━━━━━━━<br/>Produces work graph:<br/>• Directed graph of tasks<br/>• Dependencies + parallelism<br/>• Capability requirements<br/>• Inherited constraints"]
+
+    DE -->|"reviewable plan"| REVIEW{"Human Review?"}
+    REVIEW -->|"approved"| AR["Agent Registry<br/>━━━━━━━━━━━━━━━━━━<br/>Matches work units to agents:<br/>• Capability matching<br/>• Contract verification<br/>• Trust level assignment"]
+    REVIEW -->|"rejected"| DE
+
+    AR -->|"assignments"| OL["Orchestration Layer<br/>━━━━━━━━━━━━━━━━━━<br/>• Scheduling<br/>• Parallel execution<br/>• State tracking<br/>• Escalation routing"]
+
+    OL --> AGENT1["Agent A<br/>(Specialist)"]
+    OL --> AGENT2["Agent B<br/>(Specialist)"]
+    OL --> AGENT3["Agent C<br/>(Specialist)"]
+
+    AGENT1 --> GATE1["Validation Gate"]
+    AGENT2 --> GATE2["Validation Gate"]
+    AGENT3 --> GATE3["Validation Gate"]
+
+    GATE1 -->|"PASS"| AL["Assembly Layer<br/>━━━━━━━━━━━━━━━━━━<br/>• Semantic composition<br/>• Consistency check<br/>• Completeness check<br/>• Coherence check<br/>• Traceability check"]
+    GATE2 -->|"PASS"| AL
+    GATE3 -->|"PASS"| AL
+
+    GATE1 -->|"RETURN"| AGENT1
+    GATE2 -->|"RETURN"| AGENT2
+    GATE3 -->|"RETURN"| AGENT3
+
+    GATE1 -->|"ESCALATE"| ESC["Human / MB-OS"]
+    GATE2 -->|"ESCALATE"| ESC
+    GATE3 -->|"ESCALATE"| ESC
+
+    AL --> DL["Delivery Interface<br/>━━━━━━━━━━━━━━━━━━<br/>• Artifact<br/>• Provenance record<br/>• Validity attestation<br/>• Unresolved tensions"]
+
+    DL --> MBOS["MB-OS Evaluates:<br/>'Is this mine?'"]
+
+    style CR fill:#4a90d9,color:#fff
+    style VG fill:#e74c3c,color:#fff
+    style GATE1 fill:#e74c3c,color:#fff
+    style GATE2 fill:#e74c3c,color:#fff
+    style GATE3 fill:#e74c3c,color:#fff
+    style AL fill:#27ae60,color:#fff
+    style DL fill:#8e44ad,color:#fff
+    style MBOS fill:#f39c12,color:#fff

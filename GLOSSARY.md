@@ -22,6 +22,9 @@ An MB-OS component that continuously compares what you're doing with what you me
 **Commissioner**
 In an inter-MB-OS interaction, the party whose meaning initiates the need. The commissioner defines the problem, the relevant values, and the constraints on what a solution must look like. Sovereign over their own meaning layer. See [docs/06-inter-mb-os-protocol.md](docs/06-inter-mb-os-protocol.md).
 
+**Composition Boundary**
+The validation gate that sits between a partner's (sub-executor's) output and the primary executor's assembly layer. Owned and operated by the primary executor. Checks contract fulfillment, interface compliance, constraint inheritance, entity consistency, and scope leakage. The critical quality enforcement point in factory partnerships. See [docs/07-factory-composition-partnerships.md](docs/07-factory-composition-partnerships.md).
+
 **Commission**
 The formal interface between the MB-OS and a factory. Replaces the concept of a "prompt" with a structured specification carrying: origin (meaning source), intent, entities, constraints, validity criteria, and scope boundary. Commissions are immutable once issued. See [specs/commission-spec.md](specs/commission-spec.md).
 
@@ -36,6 +39,9 @@ An MB-OS component that runs choices through the meaning layer. Surfaces tension
 
 **Dual-Origin Commission**
 A commission that carries meaning from two sovereign MB-OS layers — a commissioner and an executor. Entities have three definitions (commissioner's, executor's, agreed). Constraints are combined from both parties. Both parties must accept delivery independently. See [docs/06-inter-mb-os-protocol.md](docs/06-inter-mb-os-protocol.md).
+
+**Derived Commission**
+A sub-commission created by a Primary Executor for a partner (Sub-Executor) when a capability gap is identified. Traces to the parent commission but carries only what the partner needs. Adds the Primary Executor's own constraints. Subject to the same immutability rules as any commission. See [docs/07-factory-composition-partnerships.md](docs/07-factory-composition-partnerships.md).
 
 **Decomposition Engine**
 The factory component that takes a commission and breaks it into a work graph — a directed graph of tasks with dependencies, parallelism opportunities, and merge points. The decomposition is a reviewable artifact before any agent executes.
@@ -85,6 +91,12 @@ The unit of interaction at the MB-OS level: "what actually matters to you, and w
 **Narrative Engine**
 An MB-OS component that tracks your life as a story — themes, arcs, transitions. It can surface: "the last 6 months have been about building. Your reflections suggest you're ready for integration."
 
+**Partnership**
+A collaborative relationship between a Primary Executor and one or more Sub-Executors, where each party contributes capability the other lacks. Unlike delegation, each partner has its own MB-OS and can decline work that conflicts with its values. The Primary Executor remains responsible for the full delivery. See [docs/07-factory-composition-partnerships.md](docs/07-factory-composition-partnerships.md).
+
+**Primary Executor**
+In a factory composition, the executor that holds the dual-origin commission with the Commissioner and is responsible for the full delivery. Commissions Sub-Executors through derived commissions. Owns the composition boundary gates. Cannot deflect responsibility to partners.
+
 **Orchestration Layer**
 The factory's runtime — manages scheduling, parallelism, state tracking, escalation routing, and deadlock detection. Deliberately not intelligent: it's a scheduler with constraint awareness. Intelligence belongs in the agents and gates.
 
@@ -94,8 +106,14 @@ The complete audit trail of how an artifact was produced: commission → decompo
 **Responsibility Localization**
 The principle that every work unit, constraint, and gate evaluation has a single named owner. Without localized responsibility, multi-agent systems become unauditable. Derived from SWD Canon Skill 6.
 
+**Sub-Executor**
+In a factory composition, a partner that receives a derived commission from the Primary Executor to fulfill a specific capability gap. Has its own MB-OS and factory. Delivers to the Primary Executor, not to the original Commissioner. See [docs/07-factory-composition-partnerships.md](docs/07-factory-composition-partnerships.md).
+
 **SWD Canon**
 The set of structural discipline skills that bind every layer of the Agentic Factory Architect framework. Not optional best practices — the operating discipline that prevents each layer from degrading. See [docs/05-canon-integration.md](docs/05-canon-integration.md) and [github.com/marxwood/swd-canon-skills](https://github.com/marxwood/swd-canon-skills).
+
+**Trust Chain**
+The chain of trust relationships in a factory composition: Commissioner trusts Primary Executor, Primary Executor trusts Sub-Executor. Trust does not flow transitively — each link is a separate relationship with separate terms. The Primary Executor is responsible for validating partner output before it reaches the Commissioner.
 
 **Validation Gate**
 A checkpoint between stages of the work graph that evaluates structural validity — not just completeness or plausibility. Gates check: commission alignment, entity integrity, constraint satisfaction, contract fulfillment, and semantic drift. They produce Pass, Return, or Escalate — never a confidence score. See [specs/validation-gate-spec.md](specs/validation-gate-spec.md).

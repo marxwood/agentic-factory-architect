@@ -112,3 +112,11 @@ The framework extends beyond single-person use to **multi-agent organizational c
 This transforms the framework from personal infrastructure into an **organizational coordination protocol**.
 
 See [Inter-MB-OS Protocol](docs/06-inter-mb-os-protocol.md) for the full specification.
+
+### Factory Composition as Partnership
+
+When a single executor can't fulfill a commission alone, it can compose factories with partner agents. The Primary Executor commissions sub-executors through **derived commissions** — scoped, constrained sub-commissions that carry only what the partner needs. A composition boundary gate validates partner output before assembly. The Primary Executor remains responsible for the full delivery.
+
+This enables ecosystem-scale coordination: organizations combine capabilities across meaning layers while maintaining the same commission-first, constraint-first, binary validity protocol at every boundary.
+
+See [Factory Composition & Partnerships](docs/07-factory-composition-partnerships.md) for the full specification.

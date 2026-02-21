@@ -2,6 +2,17 @@
 
 All notable changes to the Agentic Factory Architect framework.
 
+## [0.4.0] - 2026-02-21
+
+### Added
+- `docs/07-factory-composition-partnerships.md` — Factory Composition as Partnership protocol: multi-executor coordination, derived commissions, composition boundary gates, trust chains, depth limits
+- Glossary entries: Composition Boundary, Derived Commission, Partnership, Primary Executor, Sub-Executor, Trust Chain
+
+### Changed
+- Updated `README.md` with new doc in structure and navigation
+- Updated `ARCHITECTURE.md` with Factory Composition section
+- Updated `GLOSSARY.md` with 6 new terms for the partnership layer
+
 ## [0.3.0] - 2026-02-21
 
 ### Added

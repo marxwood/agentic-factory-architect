@@ -2,6 +2,17 @@
 
 All notable changes to the Agentic Factory Architect framework.
 
+## [0.3.0] - 2026-02-21
+
+### Added
+- `docs/06-inter-mb-os-protocol.md` — Inter-MB-OS Protocol for multi-agent B2B coordination between sovereign meaning layers
+- Glossary entries: Commissioner, Dual-Origin Commission, Executor, Inter-MB-OS Protocol, Meaning Overlap Zone
+
+### Changed
+- Updated `README.md` with Inter-MB-OS Protocol in structure and Quick Start
+- Updated `ARCHITECTURE.md` with Inter-MB-OS section
+- Updated `GLOSSARY.md` with 5 new terms for the B2B coordination layer
+
 ## [0.2.0] - 2026-02-21
 
 ### Added

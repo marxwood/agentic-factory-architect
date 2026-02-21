@@ -98,3 +98,17 @@ See [Canon Integration](docs/05-canon-integration.md) for the full skill-by-skil
 Factories are versioned artifacts with explicit lifecycles: `DESIGNED → VALIDATED → ACTIVE → DEPRECATED → RETIRED`. Changes go through: declare → version → validate → compare → promote/reject → archive.
 
 See [Factory Governance](docs/04-factory-governance.md) for the full governance model.
+
+## Inter-MB-OS: B2B Coordination
+
+The framework extends beyond single-person use to **multi-agent organizational coordination**. When two parties (e.g., Company X and a service provider) each operate their own MB-OS, the Inter-MB-OS Protocol governs how they:
+
+1. **Articulate needs and capabilities** — structured, not vague
+2. **Identify the meaning overlap zone** — where values and constraints are compatible
+3. **Draft dual-origin commissions** — carrying both parties' meaning, constraints, and validity criteria
+4. **Review the work graph as a negotiation artifact** — concrete structure to agree on, not abstract promises
+5. **Evaluate delivery through both meaning layers** — both parties must independently accept
+
+This transforms the framework from personal infrastructure into an **organizational coordination protocol**.
+
+See [Inter-MB-OS Protocol](docs/06-inter-mb-os-protocol.md) for the full specification.

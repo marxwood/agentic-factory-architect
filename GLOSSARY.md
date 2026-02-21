@@ -19,6 +19,9 @@ The principle that validity is assessed as a binary (valid / not valid), never a
 **Coherence Engine**
 An MB-OS component that continuously compares what you're doing with what you mean. Surfaces drift without judgment. A mirror, not a guilt machine.
 
+**Commissioner**
+In an inter-MB-OS interaction, the party whose meaning initiates the need. The commissioner defines the problem, the relevant values, and the constraints on what a solution must look like. Sovereign over their own meaning layer. See [docs/06-inter-mb-os-protocol.md](docs/06-inter-mb-os-protocol.md).
+
 **Commission**
 The formal interface between the MB-OS and a factory. Replaces the concept of a "prompt" with a structured specification carrying: origin (meaning source), intent, entities, constraints, validity criteria, and scope boundary. Commissions are immutable once issued. See [specs/commission-spec.md](specs/commission-spec.md).
 
@@ -31,6 +34,9 @@ The principle that constraints must be defined before optimization begins. Agent
 **Decision Interface**
 An MB-OS component that runs choices through the meaning layer. Surfaces tensions between competing values rather than resolving them — the human decides, the system illuminates.
 
+**Dual-Origin Commission**
+A commission that carries meaning from two sovereign MB-OS layers — a commissioner and an executor. Entities have three definitions (commissioner's, executor's, agreed). Constraints are combined from both parties. Both parties must accept delivery independently. See [docs/06-inter-mb-os-protocol.md](docs/06-inter-mb-os-protocol.md).
+
 **Decomposition Engine**
 The factory component that takes a commission and breaks it into a work graph — a directed graph of tasks with dependencies, parallelism opportunities, and merge points. The decomposition is a reviewable artifact before any agent executes.
 
@@ -42,6 +48,9 @@ Something that projects from a source of truth. Factories are derivatives of the
 
 **Drift**
 When actions diverge from stated values or intentions over time. The Coherence Engine detects drift. At the factory level, semantic drift detection checks whether meaning has shifted from what was commissioned.
+
+**Executor**
+In an inter-MB-OS interaction, the party whose factory fulfills the need. The executor defines capabilities, business constraints, and quality standards. Sovereign over their own meaning layer. See [docs/06-inter-mb-os-protocol.md](docs/06-inter-mb-os-protocol.md).
 
 **Entity-First Thinking**
 The principle that entities (the named things a system operates on) must be explicitly defined before work begins. Agents that can't name their entities produce incoherent outputs. Derived from SWD Canon Skill 1.
@@ -58,8 +67,14 @@ See Validation Gate.
 **Hierarchical Truth Management**
 The principle that sources of truth flow downward and derivatives never redefine their source. The MB-OS is the source; factories are derivatives. Derived from SWD Canon Skill 5.
 
+**Inter-MB-OS Protocol**
+The protocol governing how two sovereign meaning layers negotiate, align, and produce shared commissions. Defines roles (Commissioner/Executor), the meaning overlap zone, dual-origin commissions, and dual delivery evaluation. See [docs/06-inter-mb-os-protocol.md](docs/06-inter-mb-os-protocol.md).
+
 **MB-OS (Meaning-Based Operating System)**
 The layer between you and the world that optimizes for meaning — the coherence between your actions and your deepest values. Not an app but an infrastructure layer, like how iOS isn't one app but the thing all apps run on. See [docs/02-mb-os.md](docs/02-mb-os.md).
+
+**Meaning Overlap Zone**
+In inter-MB-OS interactions, the subset of each party's meaning layer that is relevant to the shared work. The dual-origin commission is built on this overlap. If no overlap exists, no valid commission can be issued — and that's a correct outcome.
 
 **Meaning Layer**
 The "BIOS" of the MB-OS — a structured model of your values, commitments, long arcs, and active tensions. A living document that updates through dialogue and reflection. The philosophical kernel.

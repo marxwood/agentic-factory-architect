@@ -25,7 +25,7 @@ You
 ## Quick Start
 
 - **New here?** Start with [MANIFESTO.md](MANIFESTO.md) for the philosophy, then [ARCHITECTURE.md](ARCHITECTURE.md) for the one-page overview
-- **Want the full picture?** Read [docs/01-evolution.md](docs/01-evolution.md) through [docs/05-canon-integration.md](docs/05-canon-integration.md) in order
+- **Want the full picture?** Read [docs/01-evolution.md](docs/01-evolution.md) through [docs/06-inter-mb-os-protocol.md](docs/06-inter-mb-os-protocol.md) in order
 - **Building something?** Jump to [specs/](specs/) for formal schemas and [examples/](examples/) for concrete scenarios
 
 ## Repository Structure
@@ -42,7 +42,8 @@ You
 │   ├── 02-mb-os.md                    # The Meaning-Based Operating System
 │   ├── 03-factory-architecture.md     # Complete factory architecture
 │   ├── 04-factory-governance.md       # Governance model for factories
-│   └── 05-canon-integration.md        # How SWD Canon skills bind the system
+│   ├── 05-canon-integration.md        # How SWD Canon skills bind the system
+│   └── 06-inter-mb-os-protocol.md    # Multi-agent B2B negotiation protocol
 ├── specs/
 │   ├── commission-spec.md             # Commission specification format
 │   ├── agent-contract-spec.md         # Agent capability contract format

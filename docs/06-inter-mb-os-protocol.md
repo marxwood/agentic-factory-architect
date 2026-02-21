@@ -4,7 +4,7 @@
 
 The core Agentic Factory architecture assumes a single MB-OS — one person, one meaning layer, one source of truth. But meaningful work rarely happens in isolation. People operate within organizations. Organizations interact with other organizations. Each carries its own meaning layer: values, constraints, commitments, definitions of success.
 
-When two meaning layers need to coordinate — when Company X needs something that Clarivate can provide — the single-MB-OS model is insufficient. You need a protocol for **how two meaning layers negotiate, align, and produce shared commissions**.
+When two meaning layers need to coordinate — when Company X needs something that MyCompany can provide — the single-MB-OS model is insufficient. You need a protocol for **how two meaning layers negotiate, align, and produce shared commissions**.
 
 This document specifies that protocol.
 
@@ -12,9 +12,9 @@ This document specifies that protocol.
 
 ```
 ┌─────────────────────┐         ┌─────────────────────┐
-│   Company X Agent   │         │  Clarivate Agent     │
+│   Company X Agent   │         │  MyCompany Agent     │
 │   ┌───────────────┐ │         │ ┌───────────────┐    │
-│   │   MB-OS (X)   │ │◄───────►│ │ MB-OS (Clrv)  │   │
+│   │   MB-OS (X)   │ │◄───────►│ │ MB-OS (MC)    │   │
 │   │  values       │ │ negot.  │ │ values         │   │
 │   │  constraints  │ │ layer   │ │ constraints    │   │
 │   │  needs        │ │         │ │ capabilities   │   │
@@ -24,14 +24,14 @@ This document specifies that protocol.
                                           ▼
                                 ┌─────────────────────┐
                                 │  Agentic Factory     │
-                                │  (Clarivate-owned)   │
+                                │  (MyCompany-owned)   │
                                 │  commissioned by     │
                                 │  dual-origin         │
                                 │  commission          │
                                 └─────────────────────┘
 ```
 
-Company X's agent represents Company X's meaning layer — their problem, their values, their constraints on what a solution must look like. Clarivate's agent represents Clarivate's meaning layer — their capabilities, their business model, their constraints on what they can deliver and how.
+Company X's agent represents Company X's meaning layer — their problem, their values, their constraints on what a solution must look like. MyCompany's agent represents MyCompany's meaning layer — their capabilities, their business model, their constraints on what they can deliver and how.
 
 Neither agent is subordinate to the other. Both carry legitimate meaning. The protocol exists to find — or fail to find — the overlap.
 
@@ -43,16 +43,16 @@ In an inter-MB-OS interaction, the two parties take asymmetric roles:
 
 **Commissioner** — the party whose meaning initiates the need. Company X has a problem. Their MB-OS generates the need. They are the origin of "why this work exists."
 
-**Executor** — the party whose factory fulfills the need. Clarivate has the capability. Their factory does the work. They are the origin of "how this work gets done."
+**Executor** — the party whose factory fulfills the need. MyCompany has the capability. Their factory does the work. They are the origin of "how this work gets done."
 
 This asymmetry is structural, not hierarchical. The Commissioner doesn't command the Executor. The Executor doesn't define the Commissioner's needs. Each is sovereign over their own meaning layer.
 
 ### The Meaning Overlap Zone
 
-Not all of Company X's values are relevant to Clarivate. Not all of Clarivate's constraints are visible to Company X. The protocol doesn't require full transparency between meaning layers. It requires identifying the **overlap zone** — the subset of each party's meaning that is relevant to the shared work.
+Not all of Company X's values are relevant to MyCompany. Not all of MyCompany's constraints are visible to Company X. The protocol doesn't require full transparency between meaning layers. It requires identifying the **overlap zone** — the subset of each party's meaning that is relevant to the shared work.
 
 ```
-    Company X's MB-OS              Clarivate's MB-OS
+    Company X's MB-OS              MyCompany's MB-OS
 ┌───────────────────────┐    ┌───────────────────────┐
 │                       │    │                       │
 │   Internal values     │    │   Internal values     │
@@ -77,7 +77,7 @@ Not all of Company X's values are relevant to Clarivate. Not all of Clarivate's 
                   └───────────────┘
 ```
 
-What stays private is each party's prerogative. Company X doesn't need to reveal their full strategic narrative. Clarivate doesn't need to reveal their cost structure. The protocol only requires that **what's shared is shared explicitly and honestly** — because the commission is built on it.
+What stays private is each party's prerogative. Company X doesn't need to reveal their full strategic narrative. MyCompany doesn't need to reveal their cost structure. The protocol only requires that **what's shared is shared explicitly and honestly** — because the commission is built on it.
 
 ### Dual-Origin Commission
 
@@ -103,29 +103,29 @@ commission:
     success_definition: "Data quality issues detected and resolved before they reach downstream systems"
 
   executor:
-    party: "Clarivate"
-    agent_id: "agent-clarivate-001"
+    party: "MyCompany"
+    agent_id: "agent-mycompany-001"
     meaning_source: "service_delivery.data_solutions"
     capabilities_offered: ["data_validation", "entity_resolution", "quality_scoring"]
     constraints:
       hard:
         - "Cannot access Company X's raw data outside the agreed processing scope"
-        - "Solution must use Clarivate's validated data sources"
+        - "Solution must use MyCompany's validated data sources"
         - "Delivery timeline: minimum 6 weeks for implementation"
       soft:
-        - "Prefer use of existing Clarivate platform components"
-    quality_standards: "Output validated against Clarivate's accuracy benchmarks (>99.2%)"
+        - "Prefer use of existing MyCompany platform components"
+    quality_standards: "Output validated against MyCompany's accuracy benchmarks (>99.2%)"
 
   shared:
     entities:
       - name: "Data Quality Pipeline"
         commissioner_definition: "The system that catches errors before downstream processing"
-        executor_definition: "An automated validation layer using Clarivate's entity resolution engine"
+        executor_definition: "An automated validation layer using MyCompany's entity resolution engine"
         agreed_definition: "A validation layer that catches data quality issues using entity resolution, integrated into Company X's existing infrastructure"
     constraints_combined:
       hard:
         - "EU data jurisdiction (Commissioner)"
-        - "Clarivate data sources only (Executor)"
+        - "MyCompany data sources only (Executor)"
         - "SAP integration required (Commissioner)"
         - "6-week minimum timeline (Executor)"
       soft:
@@ -134,8 +134,8 @@ commission:
     validity_criteria:
       - criterion: "Detection rate exceeds current manual process"
         evaluator: "Company X's compliance team"
-      - criterion: "Accuracy meets Clarivate's published benchmarks"
-        evaluator: "Clarivate's quality assurance"
+      - criterion: "Accuracy meets MyCompany's published benchmarks"
+        evaluator: "MyCompany's quality assurance"
       - criterion: "Solution operates within EU data jurisdiction"
         evaluator: "joint_verification"
 ```
@@ -156,11 +156,11 @@ Commissioner → Executor:
    We're looking for: [entity resolution, validation, quality scoring]."
 ```
 
-This is not a prompt. It's a **structured need statement** that carries meaning context. Clarivate's agent can evaluate this against Clarivate's MB-OS: "Do we have the capability? Does this fit our service model? Are there constraint conflicts?"
+This is not a prompt. It's a **structured need statement** that carries meaning context. MyCompany's agent can evaluate this against MyCompany's MB-OS: "Do we have the capability? Does this fit our service model? Are there constraint conflicts?"
 
 ### Phase 2: Capability Response
 
-Clarivate's agent responds with what's possible — derived from Clarivate's MB-OS:
+MyCompany's agent responds with what's possible — derived from MyCompany's MB-OS:
 
 ```
 Executor → Commissioner:
@@ -173,8 +173,8 @@ Executor → Commissioner:
 ### Phase 3: Overlap Identification
 
 Both agents identify the meaning overlap zone:
-- Where values align (Company X wants accuracy; Clarivate's quality standards guarantee it)
-- Where constraints are compatible (EU jurisdiction is feasible for Clarivate)
+- Where values align (Company X wants accuracy; MyCompany's quality standards guarantee it)
+- Where constraints are compatible (EU jurisdiction is feasible for MyCompany)
 - Where constraints conflict (SAP integration vs. standard platform preference)
 - Where entity definitions need alignment
 
@@ -182,7 +182,7 @@ If no viable overlap exists, the protocol terminates here. **This is a valid out
 
 ### Phase 4: Dual-Origin Commission Drafting
 
-If overlap exists, Clarivate's agent drafts a dual-origin commission. This is the first concrete artifact — and it's the point where the interaction moves from abstract negotiation to structural specificity.
+If overlap exists, MyCompany's agent drafts a dual-origin commission. This is the first concrete artifact — and it's the point where the interaction moves from abstract negotiation to structural specificity.
 
 The draft commission includes both parties' constraints, the agreed entity definitions, and combined validity criteria.
 
@@ -205,7 +205,7 @@ Both parties accept the commission. At this point:
 
 ### Phase 7: Work Graph as Structured Proposal
 
-Clarivate's Decomposition Engine produces a work graph from the accepted commission. This work graph is shared with Company X's agent — not as a fait accompli, but as a **reviewable artifact**.
+MyCompany's Decomposition Engine produces a work graph from the accepted commission. This work graph is shared with Company X's agent — not as a fait accompli, but as a **reviewable artifact**.
 
 ```
 Executor → Commissioner:
@@ -220,7 +220,7 @@ Executor → Commissioner:
    Do you accept this execution plan?"
 ```
 
-**This is the moment your scenario identified as critical.** The work graph gives both parties something concrete to negotiate around — not vague promises, but specific work units with named agents, explicit constraints, and binary validity gates.
+**This is the protocol's most important moment.** The work graph gives both parties something concrete to negotiate around — not vague promises, but specific work units with named agents, explicit constraints, and binary validity gates.
 
 ### Phase 8: Execution with Shared Visibility
 
@@ -231,7 +231,7 @@ The factory executes. Both parties have visibility into progress (Skill 7 — Du
 The Delivery Interface delivers to both MB-OS layers simultaneously. Each evaluates independently:
 
 - **Company X's MB-OS:** "Does this solve our data quality problem? Does it meet our compliance requirements? Is this *ours*?"
-- **Clarivate's MB-OS:** "Did we deliver according to our quality standards? Did we operate within our business constraints? Is this representative of *our* work?"
+- **MyCompany's MB-OS:** "Did we deliver according to our quality standards? Did we operate within our business constraints? Is this representative of *our* work?"
 
 Both must accept for the delivery to be considered complete.
 
@@ -251,9 +251,9 @@ Company X's MB-OS (source of truth for: need, commissioner constraints)
          ↘
            Dual-Origin Commission (shared source of truth for: the work)
          ↗
-Clarivate's MB-OS (source of truth for: capability, executor constraints)
+MyCompany's MB-OS (source of truth for: capability, executor constraints)
          ↓
-   Clarivate's Factory (derivative of the commission)
+   MyCompany's Factory (derivative of the commission)
 ```
 
 The commission is the shared source of truth. Neither MB-OS may unilaterally redefine it after acceptance. The factory is derivative of the commission, not of either MB-OS individually.
@@ -273,7 +273,7 @@ Validity is binary at every gate — same as the single-MB-OS case. But dual del
 Over the course of execution, Company X's needs may evolve. If the commission is immutable (as it should be), this means: the current commission may no longer serve Company X's meaning. The correct response: archive the commission, negotiate a new one. The factory should **not** silently adjust to unstated changes in the commissioner's meaning.
 
 ### Capability Overstatement
-Clarivate's agent may overstate capabilities — not maliciously, but because MB-OS layers tend to present optimistically. The work graph review (Phase 7) is the structural check against this. If the work graph reveals capability gaps, they surface before execution, not at delivery.
+MyCompany's agent may overstate capabilities — not maliciously, but because MB-OS layers tend to present optimistically. The work graph review (Phase 7) is the structural check against this. If the work graph reveals capability gaps, they surface before execution, not at delivery.
 
 ### Constraint Erosion
 During negotiation, there's pressure to relax constraints to find overlap. "Maybe EU-only data jurisdiction is a soft constraint, not hard?" The protocol must resist this. Constraints that the commissioner's MB-OS marks as hard are **hard**. Reclassifying them requires going back to the MB-OS, not negotiating them away at the agent level.
